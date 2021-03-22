@@ -1,0 +1,624 @@
+Simulator report for SevenSeg
+Sat May 09 10:03:56 2020
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 us      ;
+; Simulation Netlist Size     ; 242 nodes    ;
+; Simulation Coverage         ;       5.15 % ;
+; Total Number of Transitions ; 51           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                      ;
++--------------------------------------------------------------------------------------------+--------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                    ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                 ; Timing        ;
+; Start time                                                                                 ; 0 ns                                       ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                        ;               ;
+; Vector input source                                                                        ; E:/IAAU/Quartus tasks/clock24/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                         ; On            ;
+; Check outputs                                                                              ; Off                                        ; Off           ;
+; Report simulation coverage                                                                 ; On                                         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                         ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                         ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                         ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                        ; Off           ;
+; Detect glitches                                                                            ; Off                                        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                        ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                 ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                       ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       5.15 % ;
+; Total nodes checked                                 ; 242          ;
+; Total output ports checked                          ; 233          ;
+; Total output ports with complete 1/0-value coverage ; 12           ;
+; Total output ports with no 1/0-value coverage       ; 220          ;
+; Total output ports with no 1-value coverage         ; 220          ;
+; Total output ports with no 0-value coverage         ; 221          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                              ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |main|clk                         ; |main|clk                         ; out              ;
+; |main|Clock_Divider:inst|count~28 ; |main|Clock_Divider:inst|count~28 ; out              ;
+; |main|Clock_Divider:inst|count~29 ; |main|Clock_Divider:inst|count~29 ; out              ;
+; |main|Clock_Divider:inst|count~30 ; |main|Clock_Divider:inst|count~30 ; out              ;
+; |main|Clock_Divider:inst|count~31 ; |main|Clock_Divider:inst|count~31 ; out              ;
+; |main|Clock_Divider:inst|count[1] ; |main|Clock_Divider:inst|count[1] ; regout           ;
+; |main|Clock_Divider:inst|count[0] ; |main|Clock_Divider:inst|count[0] ; regout           ;
+; |main|Clock_Divider:inst|Add0~0   ; |main|Clock_Divider:inst|Add0~0   ; out0             ;
+; |main|Clock_Divider:inst|Add0~1   ; |main|Clock_Divider:inst|Add0~1   ; out0             ;
+; |main|Clock_Divider:inst|Add0~2   ; |main|Clock_Divider:inst|Add0~2   ; out0             ;
+; |main|Clock_Divider:inst|Add0~3   ; |main|Clock_Divider:inst|Add0~3   ; out0             ;
+; |main|Clock_Divider:inst|Add0~4   ; |main|Clock_Divider:inst|Add0~4   ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                           ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |main|seg1_A                           ; |main|seg1_A                           ; pin_out          ;
+; |main|Clk_Reset                        ; |main|Clk_Reset                        ; out              ;
+; |main|rst                              ; |main|rst                              ; out              ;
+; |main|seg1_B                           ; |main|seg1_B                           ; pin_out          ;
+; |main|seg1_C                           ; |main|seg1_C                           ; pin_out          ;
+; |main|seg1_D                           ; |main|seg1_D                           ; pin_out          ;
+; |main|seg1_E                           ; |main|seg1_E                           ; pin_out          ;
+; |main|seg1_F                           ; |main|seg1_F                           ; pin_out          ;
+; |main|seg1_G                           ; |main|seg1_G                           ; pin_out          ;
+; |main|seg2_P                           ; |main|seg2_P                           ; pin_out          ;
+; |main|seg2_A                           ; |main|seg2_A                           ; pin_out          ;
+; |main|seg2_B                           ; |main|seg2_B                           ; pin_out          ;
+; |main|seg2_C                           ; |main|seg2_C                           ; pin_out          ;
+; |main|seg2_D                           ; |main|seg2_D                           ; pin_out          ;
+; |main|seg2_E                           ; |main|seg2_E                           ; pin_out          ;
+; |main|seg2_F                           ; |main|seg2_F                           ; pin_out          ;
+; |main|seg2_G                           ; |main|seg2_G                           ; pin_out          ;
+; |main|seg3_A                           ; |main|seg3_A                           ; pin_out          ;
+; |main|seg3_B                           ; |main|seg3_B                           ; pin_out          ;
+; |main|seg3_C                           ; |main|seg3_C                           ; pin_out          ;
+; |main|seg3_D                           ; |main|seg3_D                           ; pin_out          ;
+; |main|seg3_E                           ; |main|seg3_E                           ; pin_out          ;
+; |main|seg3_F                           ; |main|seg3_F                           ; pin_out          ;
+; |main|seg3_G                           ; |main|seg3_G                           ; pin_out          ;
+; |main|seg3_P                           ; |main|seg3_P                           ; pin_out          ;
+; |main|seg1_P                           ; |main|seg1_P                           ; pin_out          ;
+; |main|Clock_Divider:inst|count~0       ; |main|Clock_Divider:inst|count~0       ; out              ;
+; |main|Clock_Divider:inst|count~1       ; |main|Clock_Divider:inst|count~1       ; out              ;
+; |main|Clock_Divider:inst|count~2       ; |main|Clock_Divider:inst|count~2       ; out              ;
+; |main|Clock_Divider:inst|count~3       ; |main|Clock_Divider:inst|count~3       ; out              ;
+; |main|Clock_Divider:inst|count~4       ; |main|Clock_Divider:inst|count~4       ; out              ;
+; |main|Clock_Divider:inst|count~5       ; |main|Clock_Divider:inst|count~5       ; out              ;
+; |main|Clock_Divider:inst|count~6       ; |main|Clock_Divider:inst|count~6       ; out              ;
+; |main|Clock_Divider:inst|count~7       ; |main|Clock_Divider:inst|count~7       ; out              ;
+; |main|Clock_Divider:inst|count~8       ; |main|Clock_Divider:inst|count~8       ; out              ;
+; |main|Clock_Divider:inst|count~9       ; |main|Clock_Divider:inst|count~9       ; out              ;
+; |main|Clock_Divider:inst|count~10      ; |main|Clock_Divider:inst|count~10      ; out              ;
+; |main|Clock_Divider:inst|count~11      ; |main|Clock_Divider:inst|count~11      ; out              ;
+; |main|Clock_Divider:inst|count~12      ; |main|Clock_Divider:inst|count~12      ; out              ;
+; |main|Clock_Divider:inst|count~13      ; |main|Clock_Divider:inst|count~13      ; out              ;
+; |main|Clock_Divider:inst|count~14      ; |main|Clock_Divider:inst|count~14      ; out              ;
+; |main|Clock_Divider:inst|count~15      ; |main|Clock_Divider:inst|count~15      ; out              ;
+; |main|Clock_Divider:inst|count~16      ; |main|Clock_Divider:inst|count~16      ; out              ;
+; |main|Clock_Divider:inst|count~17      ; |main|Clock_Divider:inst|count~17      ; out              ;
+; |main|Clock_Divider:inst|count~18      ; |main|Clock_Divider:inst|count~18      ; out              ;
+; |main|Clock_Divider:inst|count~19      ; |main|Clock_Divider:inst|count~19      ; out              ;
+; |main|Clock_Divider:inst|count~20      ; |main|Clock_Divider:inst|count~20      ; out              ;
+; |main|Clock_Divider:inst|count~21      ; |main|Clock_Divider:inst|count~21      ; out              ;
+; |main|Clock_Divider:inst|count~22      ; |main|Clock_Divider:inst|count~22      ; out              ;
+; |main|Clock_Divider:inst|count~23      ; |main|Clock_Divider:inst|count~23      ; out              ;
+; |main|Clock_Divider:inst|count~24      ; |main|Clock_Divider:inst|count~24      ; out              ;
+; |main|Clock_Divider:inst|count~25      ; |main|Clock_Divider:inst|count~25      ; out              ;
+; |main|Clock_Divider:inst|count~26      ; |main|Clock_Divider:inst|count~26      ; out              ;
+; |main|Clock_Divider:inst|count~27      ; |main|Clock_Divider:inst|count~27      ; out              ;
+; |main|Clock_Divider:inst|count[31]     ; |main|Clock_Divider:inst|count[31]     ; regout           ;
+; |main|Clock_Divider:inst|count[30]     ; |main|Clock_Divider:inst|count[30]     ; regout           ;
+; |main|Clock_Divider:inst|count[29]     ; |main|Clock_Divider:inst|count[29]     ; regout           ;
+; |main|Clock_Divider:inst|count[28]     ; |main|Clock_Divider:inst|count[28]     ; regout           ;
+; |main|Clock_Divider:inst|count[27]     ; |main|Clock_Divider:inst|count[27]     ; regout           ;
+; |main|Clock_Divider:inst|count[26]     ; |main|Clock_Divider:inst|count[26]     ; regout           ;
+; |main|Clock_Divider:inst|count[25]     ; |main|Clock_Divider:inst|count[25]     ; regout           ;
+; |main|Clock_Divider:inst|count[24]     ; |main|Clock_Divider:inst|count[24]     ; regout           ;
+; |main|Clock_Divider:inst|count[23]     ; |main|Clock_Divider:inst|count[23]     ; regout           ;
+; |main|Clock_Divider:inst|count[22]     ; |main|Clock_Divider:inst|count[22]     ; regout           ;
+; |main|Clock_Divider:inst|count[21]     ; |main|Clock_Divider:inst|count[21]     ; regout           ;
+; |main|Clock_Divider:inst|count[20]     ; |main|Clock_Divider:inst|count[20]     ; regout           ;
+; |main|Clock_Divider:inst|count[19]     ; |main|Clock_Divider:inst|count[19]     ; regout           ;
+; |main|Clock_Divider:inst|count[18]     ; |main|Clock_Divider:inst|count[18]     ; regout           ;
+; |main|Clock_Divider:inst|count[17]     ; |main|Clock_Divider:inst|count[17]     ; regout           ;
+; |main|Clock_Divider:inst|count[16]     ; |main|Clock_Divider:inst|count[16]     ; regout           ;
+; |main|Clock_Divider:inst|count[15]     ; |main|Clock_Divider:inst|count[15]     ; regout           ;
+; |main|Clock_Divider:inst|count[14]     ; |main|Clock_Divider:inst|count[14]     ; regout           ;
+; |main|Clock_Divider:inst|count[13]     ; |main|Clock_Divider:inst|count[13]     ; regout           ;
+; |main|Clock_Divider:inst|count[12]     ; |main|Clock_Divider:inst|count[12]     ; regout           ;
+; |main|Clock_Divider:inst|count[11]     ; |main|Clock_Divider:inst|count[11]     ; regout           ;
+; |main|Clock_Divider:inst|count[10]     ; |main|Clock_Divider:inst|count[10]     ; regout           ;
+; |main|Clock_Divider:inst|count[9]      ; |main|Clock_Divider:inst|count[9]      ; regout           ;
+; |main|Clock_Divider:inst|count[8]      ; |main|Clock_Divider:inst|count[8]      ; regout           ;
+; |main|Clock_Divider:inst|count[7]      ; |main|Clock_Divider:inst|count[7]      ; regout           ;
+; |main|Clock_Divider:inst|count[6]      ; |main|Clock_Divider:inst|count[6]      ; regout           ;
+; |main|Clock_Divider:inst|count[5]      ; |main|Clock_Divider:inst|count[5]      ; regout           ;
+; |main|Clock_Divider:inst|count[4]      ; |main|Clock_Divider:inst|count[4]      ; regout           ;
+; |main|Clock_Divider:inst|count[3]      ; |main|Clock_Divider:inst|count[3]      ; regout           ;
+; |main|BinaryToBCD:inst5|74185:inst4|41 ; |main|BinaryToBCD:inst5|74185:inst4|41 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|30 ; |main|BinaryToBCD:inst5|74185:inst4|30 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|29 ; |main|BinaryToBCD:inst5|74185:inst4|29 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|31 ; |main|BinaryToBCD:inst5|74185:inst4|31 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|32 ; |main|BinaryToBCD:inst5|74185:inst4|32 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|33 ; |main|BinaryToBCD:inst5|74185:inst4|33 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|34 ; |main|BinaryToBCD:inst5|74185:inst4|34 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|35 ; |main|BinaryToBCD:inst5|74185:inst4|35 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|36 ; |main|BinaryToBCD:inst5|74185:inst4|36 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|37 ; |main|BinaryToBCD:inst5|74185:inst4|37 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|38 ; |main|BinaryToBCD:inst5|74185:inst4|38 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|43 ; |main|BinaryToBCD:inst5|74185:inst4|43 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|20 ; |main|BinaryToBCD:inst5|74185:inst4|20 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|21 ; |main|BinaryToBCD:inst5|74185:inst4|21 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|22 ; |main|BinaryToBCD:inst5|74185:inst4|22 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|23 ; |main|BinaryToBCD:inst5|74185:inst4|23 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|24 ; |main|BinaryToBCD:inst5|74185:inst4|24 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|25 ; |main|BinaryToBCD:inst5|74185:inst4|25 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|26 ; |main|BinaryToBCD:inst5|74185:inst4|26 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|27 ; |main|BinaryToBCD:inst5|74185:inst4|27 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|28 ; |main|BinaryToBCD:inst5|74185:inst4|28 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|45 ; |main|BinaryToBCD:inst5|74185:inst4|45 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|19 ; |main|BinaryToBCD:inst5|74185:inst4|19 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|18 ; |main|BinaryToBCD:inst5|74185:inst4|18 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|17 ; |main|BinaryToBCD:inst5|74185:inst4|17 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|16 ; |main|BinaryToBCD:inst5|74185:inst4|16 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|15 ; |main|BinaryToBCD:inst5|74185:inst4|15 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|14 ; |main|BinaryToBCD:inst5|74185:inst4|14 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|41 ; |main|BinaryToBCD:inst5|74185:inst1|41 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|30 ; |main|BinaryToBCD:inst5|74185:inst1|30 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|29 ; |main|BinaryToBCD:inst5|74185:inst1|29 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|31 ; |main|BinaryToBCD:inst5|74185:inst1|31 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|32 ; |main|BinaryToBCD:inst5|74185:inst1|32 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|33 ; |main|BinaryToBCD:inst5|74185:inst1|33 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|34 ; |main|BinaryToBCD:inst5|74185:inst1|34 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|35 ; |main|BinaryToBCD:inst5|74185:inst1|35 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|36 ; |main|BinaryToBCD:inst5|74185:inst1|36 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|37 ; |main|BinaryToBCD:inst5|74185:inst1|37 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|38 ; |main|BinaryToBCD:inst5|74185:inst1|38 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|43 ; |main|BinaryToBCD:inst5|74185:inst1|43 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|20 ; |main|BinaryToBCD:inst5|74185:inst1|20 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|21 ; |main|BinaryToBCD:inst5|74185:inst1|21 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|22 ; |main|BinaryToBCD:inst5|74185:inst1|22 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|23 ; |main|BinaryToBCD:inst5|74185:inst1|23 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|24 ; |main|BinaryToBCD:inst5|74185:inst1|24 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|25 ; |main|BinaryToBCD:inst5|74185:inst1|25 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|26 ; |main|BinaryToBCD:inst5|74185:inst1|26 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|27 ; |main|BinaryToBCD:inst5|74185:inst1|27 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|28 ; |main|BinaryToBCD:inst5|74185:inst1|28 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|45 ; |main|BinaryToBCD:inst5|74185:inst1|45 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|19 ; |main|BinaryToBCD:inst5|74185:inst1|19 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|18 ; |main|BinaryToBCD:inst5|74185:inst1|18 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|17 ; |main|BinaryToBCD:inst5|74185:inst1|17 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|16 ; |main|BinaryToBCD:inst5|74185:inst1|16 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|15 ; |main|BinaryToBCD:inst5|74185:inst1|15 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|14 ; |main|BinaryToBCD:inst5|74185:inst1|14 ; out0             ;
+; |main|7447:inst1|87                    ; |main|7447:inst1|87                    ; out0             ;
+; |main|7447:inst1|1                     ; |main|7447:inst1|1                     ; out0             ;
+; |main|7447:inst1|38                    ; |main|7447:inst1|38                    ; out0             ;
+; |main|7447:inst1|86                    ; |main|7447:inst1|86                    ; out0             ;
+; |main|7447:inst1|31                    ; |main|7447:inst1|31                    ; out0             ;
+; |main|7447:inst1|2                     ; |main|7447:inst1|2                     ; out0             ;
+; |main|7447:inst1|30                    ; |main|7447:inst1|30                    ; out0             ;
+; |main|7447:inst1|85                    ; |main|7447:inst1|85                    ; out0             ;
+; |main|7447:inst1|32                    ; |main|7447:inst1|32                    ; out0             ;
+; |main|7447:inst1|84                    ; |main|7447:inst1|84                    ; out0             ;
+; |main|7447:inst1|5                     ; |main|7447:inst1|5                     ; out0             ;
+; |main|7447:inst1|3                     ; |main|7447:inst1|3                     ; out0             ;
+; |main|7447:inst1|4                     ; |main|7447:inst1|4                     ; out0             ;
+; |main|7447:inst1|83                    ; |main|7447:inst1|83                    ; out0             ;
+; |main|7447:inst1|33                    ; |main|7447:inst1|33                    ; out0             ;
+; |main|7447:inst1|6                     ; |main|7447:inst1|6                     ; out0             ;
+; |main|7447:inst1|82                    ; |main|7447:inst1|82                    ; out0             ;
+; |main|7447:inst1|34                    ; |main|7447:inst1|34                    ; out0             ;
+; |main|7447:inst1|7                     ; |main|7447:inst1|7                     ; out0             ;
+; |main|7447:inst1|8                     ; |main|7447:inst1|8                     ; out0             ;
+; |main|7447:inst1|81                    ; |main|7447:inst1|81                    ; out0             ;
+; |main|7447:inst1|36                    ; |main|7447:inst1|36                    ; out0             ;
+; |main|7447:inst1|39                    ; |main|7447:inst1|39                    ; out0             ;
+; |main|7447:inst1|35                    ; |main|7447:inst1|35                    ; out0             ;
+; |main|Clock_Divider:inst|Add0~5        ; |main|Clock_Divider:inst|Add0~5        ; out0             ;
+; |main|Clock_Divider:inst|Add0~6        ; |main|Clock_Divider:inst|Add0~6        ; out0             ;
+; |main|Clock_Divider:inst|Add0~7        ; |main|Clock_Divider:inst|Add0~7        ; out0             ;
+; |main|Clock_Divider:inst|Add0~8        ; |main|Clock_Divider:inst|Add0~8        ; out0             ;
+; |main|Clock_Divider:inst|Add0~9        ; |main|Clock_Divider:inst|Add0~9        ; out0             ;
+; |main|Clock_Divider:inst|Add0~10       ; |main|Clock_Divider:inst|Add0~10       ; out0             ;
+; |main|Clock_Divider:inst|Add0~11       ; |main|Clock_Divider:inst|Add0~11       ; out0             ;
+; |main|Clock_Divider:inst|Add0~12       ; |main|Clock_Divider:inst|Add0~12       ; out0             ;
+; |main|Clock_Divider:inst|Add0~13       ; |main|Clock_Divider:inst|Add0~13       ; out0             ;
+; |main|Clock_Divider:inst|Add0~14       ; |main|Clock_Divider:inst|Add0~14       ; out0             ;
+; |main|Clock_Divider:inst|Add0~15       ; |main|Clock_Divider:inst|Add0~15       ; out0             ;
+; |main|Clock_Divider:inst|Add0~16       ; |main|Clock_Divider:inst|Add0~16       ; out0             ;
+; |main|Clock_Divider:inst|Add0~17       ; |main|Clock_Divider:inst|Add0~17       ; out0             ;
+; |main|Clock_Divider:inst|Add0~18       ; |main|Clock_Divider:inst|Add0~18       ; out0             ;
+; |main|Clock_Divider:inst|Add0~19       ; |main|Clock_Divider:inst|Add0~19       ; out0             ;
+; |main|Clock_Divider:inst|Add0~20       ; |main|Clock_Divider:inst|Add0~20       ; out0             ;
+; |main|Clock_Divider:inst|Add0~21       ; |main|Clock_Divider:inst|Add0~21       ; out0             ;
+; |main|Clock_Divider:inst|Add0~22       ; |main|Clock_Divider:inst|Add0~22       ; out0             ;
+; |main|Clock_Divider:inst|Add0~23       ; |main|Clock_Divider:inst|Add0~23       ; out0             ;
+; |main|Clock_Divider:inst|Add0~24       ; |main|Clock_Divider:inst|Add0~24       ; out0             ;
+; |main|Clock_Divider:inst|Add0~25       ; |main|Clock_Divider:inst|Add0~25       ; out0             ;
+; |main|Clock_Divider:inst|Add0~26       ; |main|Clock_Divider:inst|Add0~26       ; out0             ;
+; |main|Clock_Divider:inst|Add0~27       ; |main|Clock_Divider:inst|Add0~27       ; out0             ;
+; |main|Clock_Divider:inst|Add0~28       ; |main|Clock_Divider:inst|Add0~28       ; out0             ;
+; |main|Clock_Divider:inst|Add0~29       ; |main|Clock_Divider:inst|Add0~29       ; out0             ;
+; |main|Clock_Divider:inst|Add0~30       ; |main|Clock_Divider:inst|Add0~30       ; out0             ;
+; |main|Clock_Divider:inst|Add0~31       ; |main|Clock_Divider:inst|Add0~31       ; out0             ;
+; |main|Clock_Divider:inst|Add0~32       ; |main|Clock_Divider:inst|Add0~32       ; out0             ;
+; |main|Clock_Divider:inst|Add0~33       ; |main|Clock_Divider:inst|Add0~33       ; out0             ;
+; |main|Clock_Divider:inst|Add0~34       ; |main|Clock_Divider:inst|Add0~34       ; out0             ;
+; |main|Clock_Divider:inst|Add0~35       ; |main|Clock_Divider:inst|Add0~35       ; out0             ;
+; |main|Clock_Divider:inst|Add0~36       ; |main|Clock_Divider:inst|Add0~36       ; out0             ;
+; |main|Clock_Divider:inst|Add0~37       ; |main|Clock_Divider:inst|Add0~37       ; out0             ;
+; |main|Clock_Divider:inst|Add0~38       ; |main|Clock_Divider:inst|Add0~38       ; out0             ;
+; |main|Clock_Divider:inst|Add0~39       ; |main|Clock_Divider:inst|Add0~39       ; out0             ;
+; |main|Clock_Divider:inst|Add0~40       ; |main|Clock_Divider:inst|Add0~40       ; out0             ;
+; |main|Clock_Divider:inst|Add0~41       ; |main|Clock_Divider:inst|Add0~41       ; out0             ;
+; |main|Clock_Divider:inst|Add0~42       ; |main|Clock_Divider:inst|Add0~42       ; out0             ;
+; |main|Clock_Divider:inst|Add0~43       ; |main|Clock_Divider:inst|Add0~43       ; out0             ;
+; |main|Clock_Divider:inst|Add0~44       ; |main|Clock_Divider:inst|Add0~44       ; out0             ;
+; |main|Clock_Divider:inst|Add0~45       ; |main|Clock_Divider:inst|Add0~45       ; out0             ;
+; |main|Clock_Divider:inst|Add0~46       ; |main|Clock_Divider:inst|Add0~46       ; out0             ;
+; |main|Clock_Divider:inst|Add0~47       ; |main|Clock_Divider:inst|Add0~47       ; out0             ;
+; |main|Clock_Divider:inst|Add0~48       ; |main|Clock_Divider:inst|Add0~48       ; out0             ;
+; |main|Clock_Divider:inst|Add0~49       ; |main|Clock_Divider:inst|Add0~49       ; out0             ;
+; |main|Clock_Divider:inst|Add0~50       ; |main|Clock_Divider:inst|Add0~50       ; out0             ;
+; |main|Clock_Divider:inst|Add0~51       ; |main|Clock_Divider:inst|Add0~51       ; out0             ;
+; |main|Clock_Divider:inst|Add0~52       ; |main|Clock_Divider:inst|Add0~52       ; out0             ;
+; |main|Clock_Divider:inst|Add0~53       ; |main|Clock_Divider:inst|Add0~53       ; out0             ;
+; |main|Clock_Divider:inst|Add0~54       ; |main|Clock_Divider:inst|Add0~54       ; out0             ;
+; |main|Clock_Divider:inst|Add0~55       ; |main|Clock_Divider:inst|Add0~55       ; out0             ;
+; |main|Clock_Divider:inst|Add0~56       ; |main|Clock_Divider:inst|Add0~56       ; out0             ;
+; |main|Clock_Divider:inst|Add0~57       ; |main|Clock_Divider:inst|Add0~57       ; out0             ;
+; |main|Clock_Divider:inst|Add0~58       ; |main|Clock_Divider:inst|Add0~58       ; out0             ;
+; |main|Clock_Divider:inst|Add0~59       ; |main|Clock_Divider:inst|Add0~59       ; out0             ;
+; |main|Clock_Divider:inst|Add0~60       ; |main|Clock_Divider:inst|Add0~60       ; out0             ;
+; |main|Clock_Divider:inst|Equal0~0      ; |main|Clock_Divider:inst|Equal0~0      ; out0             ;
++----------------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                           ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |main|seg1_A                           ; |main|seg1_A                           ; pin_out          ;
+; |main|Clk_Reset                        ; |main|Clk_Reset                        ; out              ;
+; |main|rst                              ; |main|rst                              ; out              ;
+; |main|seg1_B                           ; |main|seg1_B                           ; pin_out          ;
+; |main|seg1_C                           ; |main|seg1_C                           ; pin_out          ;
+; |main|seg1_D                           ; |main|seg1_D                           ; pin_out          ;
+; |main|seg1_E                           ; |main|seg1_E                           ; pin_out          ;
+; |main|seg1_F                           ; |main|seg1_F                           ; pin_out          ;
+; |main|seg1_G                           ; |main|seg1_G                           ; pin_out          ;
+; |main|seg2_P                           ; |main|seg2_P                           ; pin_out          ;
+; |main|seg2_A                           ; |main|seg2_A                           ; pin_out          ;
+; |main|seg2_B                           ; |main|seg2_B                           ; pin_out          ;
+; |main|seg2_C                           ; |main|seg2_C                           ; pin_out          ;
+; |main|seg2_D                           ; |main|seg2_D                           ; pin_out          ;
+; |main|seg2_E                           ; |main|seg2_E                           ; pin_out          ;
+; |main|seg2_F                           ; |main|seg2_F                           ; pin_out          ;
+; |main|seg2_G                           ; |main|seg2_G                           ; pin_out          ;
+; |main|seg3_A                           ; |main|seg3_A                           ; pin_out          ;
+; |main|seg3_B                           ; |main|seg3_B                           ; pin_out          ;
+; |main|seg3_C                           ; |main|seg3_C                           ; pin_out          ;
+; |main|seg3_D                           ; |main|seg3_D                           ; pin_out          ;
+; |main|seg3_E                           ; |main|seg3_E                           ; pin_out          ;
+; |main|seg3_F                           ; |main|seg3_F                           ; pin_out          ;
+; |main|seg3_G                           ; |main|seg3_G                           ; pin_out          ;
+; |main|seg3_P                           ; |main|seg3_P                           ; pin_out          ;
+; |main|seg1_P                           ; |main|seg1_P                           ; pin_out          ;
+; |main|Clock_Divider:inst|count~0       ; |main|Clock_Divider:inst|count~0       ; out              ;
+; |main|Clock_Divider:inst|count~1       ; |main|Clock_Divider:inst|count~1       ; out              ;
+; |main|Clock_Divider:inst|count~2       ; |main|Clock_Divider:inst|count~2       ; out              ;
+; |main|Clock_Divider:inst|count~3       ; |main|Clock_Divider:inst|count~3       ; out              ;
+; |main|Clock_Divider:inst|count~4       ; |main|Clock_Divider:inst|count~4       ; out              ;
+; |main|Clock_Divider:inst|count~5       ; |main|Clock_Divider:inst|count~5       ; out              ;
+; |main|Clock_Divider:inst|count~6       ; |main|Clock_Divider:inst|count~6       ; out              ;
+; |main|Clock_Divider:inst|count~7       ; |main|Clock_Divider:inst|count~7       ; out              ;
+; |main|Clock_Divider:inst|count~8       ; |main|Clock_Divider:inst|count~8       ; out              ;
+; |main|Clock_Divider:inst|count~9       ; |main|Clock_Divider:inst|count~9       ; out              ;
+; |main|Clock_Divider:inst|count~10      ; |main|Clock_Divider:inst|count~10      ; out              ;
+; |main|Clock_Divider:inst|count~11      ; |main|Clock_Divider:inst|count~11      ; out              ;
+; |main|Clock_Divider:inst|count~12      ; |main|Clock_Divider:inst|count~12      ; out              ;
+; |main|Clock_Divider:inst|count~13      ; |main|Clock_Divider:inst|count~13      ; out              ;
+; |main|Clock_Divider:inst|count~14      ; |main|Clock_Divider:inst|count~14      ; out              ;
+; |main|Clock_Divider:inst|count~15      ; |main|Clock_Divider:inst|count~15      ; out              ;
+; |main|Clock_Divider:inst|count~16      ; |main|Clock_Divider:inst|count~16      ; out              ;
+; |main|Clock_Divider:inst|count~17      ; |main|Clock_Divider:inst|count~17      ; out              ;
+; |main|Clock_Divider:inst|count~18      ; |main|Clock_Divider:inst|count~18      ; out              ;
+; |main|Clock_Divider:inst|count~19      ; |main|Clock_Divider:inst|count~19      ; out              ;
+; |main|Clock_Divider:inst|count~20      ; |main|Clock_Divider:inst|count~20      ; out              ;
+; |main|Clock_Divider:inst|count~21      ; |main|Clock_Divider:inst|count~21      ; out              ;
+; |main|Clock_Divider:inst|count~22      ; |main|Clock_Divider:inst|count~22      ; out              ;
+; |main|Clock_Divider:inst|count~23      ; |main|Clock_Divider:inst|count~23      ; out              ;
+; |main|Clock_Divider:inst|count~24      ; |main|Clock_Divider:inst|count~24      ; out              ;
+; |main|Clock_Divider:inst|count~25      ; |main|Clock_Divider:inst|count~25      ; out              ;
+; |main|Clock_Divider:inst|count~26      ; |main|Clock_Divider:inst|count~26      ; out              ;
+; |main|Clock_Divider:inst|count~27      ; |main|Clock_Divider:inst|count~27      ; out              ;
+; |main|Clock_Divider:inst|count[31]     ; |main|Clock_Divider:inst|count[31]     ; regout           ;
+; |main|Clock_Divider:inst|count[30]     ; |main|Clock_Divider:inst|count[30]     ; regout           ;
+; |main|Clock_Divider:inst|count[29]     ; |main|Clock_Divider:inst|count[29]     ; regout           ;
+; |main|Clock_Divider:inst|count[28]     ; |main|Clock_Divider:inst|count[28]     ; regout           ;
+; |main|Clock_Divider:inst|count[27]     ; |main|Clock_Divider:inst|count[27]     ; regout           ;
+; |main|Clock_Divider:inst|count[26]     ; |main|Clock_Divider:inst|count[26]     ; regout           ;
+; |main|Clock_Divider:inst|count[25]     ; |main|Clock_Divider:inst|count[25]     ; regout           ;
+; |main|Clock_Divider:inst|count[24]     ; |main|Clock_Divider:inst|count[24]     ; regout           ;
+; |main|Clock_Divider:inst|count[23]     ; |main|Clock_Divider:inst|count[23]     ; regout           ;
+; |main|Clock_Divider:inst|count[22]     ; |main|Clock_Divider:inst|count[22]     ; regout           ;
+; |main|Clock_Divider:inst|count[21]     ; |main|Clock_Divider:inst|count[21]     ; regout           ;
+; |main|Clock_Divider:inst|count[20]     ; |main|Clock_Divider:inst|count[20]     ; regout           ;
+; |main|Clock_Divider:inst|count[19]     ; |main|Clock_Divider:inst|count[19]     ; regout           ;
+; |main|Clock_Divider:inst|count[18]     ; |main|Clock_Divider:inst|count[18]     ; regout           ;
+; |main|Clock_Divider:inst|count[17]     ; |main|Clock_Divider:inst|count[17]     ; regout           ;
+; |main|Clock_Divider:inst|count[16]     ; |main|Clock_Divider:inst|count[16]     ; regout           ;
+; |main|Clock_Divider:inst|count[15]     ; |main|Clock_Divider:inst|count[15]     ; regout           ;
+; |main|Clock_Divider:inst|count[14]     ; |main|Clock_Divider:inst|count[14]     ; regout           ;
+; |main|Clock_Divider:inst|count[13]     ; |main|Clock_Divider:inst|count[13]     ; regout           ;
+; |main|Clock_Divider:inst|count[12]     ; |main|Clock_Divider:inst|count[12]     ; regout           ;
+; |main|Clock_Divider:inst|count[11]     ; |main|Clock_Divider:inst|count[11]     ; regout           ;
+; |main|Clock_Divider:inst|count[10]     ; |main|Clock_Divider:inst|count[10]     ; regout           ;
+; |main|Clock_Divider:inst|count[9]      ; |main|Clock_Divider:inst|count[9]      ; regout           ;
+; |main|Clock_Divider:inst|count[8]      ; |main|Clock_Divider:inst|count[8]      ; regout           ;
+; |main|Clock_Divider:inst|count[7]      ; |main|Clock_Divider:inst|count[7]      ; regout           ;
+; |main|Clock_Divider:inst|count[6]      ; |main|Clock_Divider:inst|count[6]      ; regout           ;
+; |main|Clock_Divider:inst|count[5]      ; |main|Clock_Divider:inst|count[5]      ; regout           ;
+; |main|Clock_Divider:inst|count[4]      ; |main|Clock_Divider:inst|count[4]      ; regout           ;
+; |main|Clock_Divider:inst|count[3]      ; |main|Clock_Divider:inst|count[3]      ; regout           ;
+; |main|Clock_Divider:inst|count[2]      ; |main|Clock_Divider:inst|count[2]      ; regout           ;
+; |main|BinaryToBCD:inst5|74185:inst4|41 ; |main|BinaryToBCD:inst5|74185:inst4|41 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|30 ; |main|BinaryToBCD:inst5|74185:inst4|30 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|29 ; |main|BinaryToBCD:inst5|74185:inst4|29 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|31 ; |main|BinaryToBCD:inst5|74185:inst4|31 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|32 ; |main|BinaryToBCD:inst5|74185:inst4|32 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|33 ; |main|BinaryToBCD:inst5|74185:inst4|33 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|34 ; |main|BinaryToBCD:inst5|74185:inst4|34 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|35 ; |main|BinaryToBCD:inst5|74185:inst4|35 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|36 ; |main|BinaryToBCD:inst5|74185:inst4|36 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|37 ; |main|BinaryToBCD:inst5|74185:inst4|37 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|38 ; |main|BinaryToBCD:inst5|74185:inst4|38 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|43 ; |main|BinaryToBCD:inst5|74185:inst4|43 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|20 ; |main|BinaryToBCD:inst5|74185:inst4|20 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|21 ; |main|BinaryToBCD:inst5|74185:inst4|21 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|22 ; |main|BinaryToBCD:inst5|74185:inst4|22 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|23 ; |main|BinaryToBCD:inst5|74185:inst4|23 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|24 ; |main|BinaryToBCD:inst5|74185:inst4|24 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|25 ; |main|BinaryToBCD:inst5|74185:inst4|25 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|26 ; |main|BinaryToBCD:inst5|74185:inst4|26 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|27 ; |main|BinaryToBCD:inst5|74185:inst4|27 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|28 ; |main|BinaryToBCD:inst5|74185:inst4|28 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|45 ; |main|BinaryToBCD:inst5|74185:inst4|45 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|19 ; |main|BinaryToBCD:inst5|74185:inst4|19 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|18 ; |main|BinaryToBCD:inst5|74185:inst4|18 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|17 ; |main|BinaryToBCD:inst5|74185:inst4|17 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|16 ; |main|BinaryToBCD:inst5|74185:inst4|16 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|15 ; |main|BinaryToBCD:inst5|74185:inst4|15 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst4|14 ; |main|BinaryToBCD:inst5|74185:inst4|14 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|41 ; |main|BinaryToBCD:inst5|74185:inst1|41 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|30 ; |main|BinaryToBCD:inst5|74185:inst1|30 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|29 ; |main|BinaryToBCD:inst5|74185:inst1|29 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|31 ; |main|BinaryToBCD:inst5|74185:inst1|31 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|32 ; |main|BinaryToBCD:inst5|74185:inst1|32 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|33 ; |main|BinaryToBCD:inst5|74185:inst1|33 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|34 ; |main|BinaryToBCD:inst5|74185:inst1|34 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|35 ; |main|BinaryToBCD:inst5|74185:inst1|35 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|36 ; |main|BinaryToBCD:inst5|74185:inst1|36 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|37 ; |main|BinaryToBCD:inst5|74185:inst1|37 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|38 ; |main|BinaryToBCD:inst5|74185:inst1|38 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|43 ; |main|BinaryToBCD:inst5|74185:inst1|43 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|20 ; |main|BinaryToBCD:inst5|74185:inst1|20 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|21 ; |main|BinaryToBCD:inst5|74185:inst1|21 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|22 ; |main|BinaryToBCD:inst5|74185:inst1|22 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|23 ; |main|BinaryToBCD:inst5|74185:inst1|23 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|24 ; |main|BinaryToBCD:inst5|74185:inst1|24 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|25 ; |main|BinaryToBCD:inst5|74185:inst1|25 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|26 ; |main|BinaryToBCD:inst5|74185:inst1|26 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|27 ; |main|BinaryToBCD:inst5|74185:inst1|27 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|28 ; |main|BinaryToBCD:inst5|74185:inst1|28 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|45 ; |main|BinaryToBCD:inst5|74185:inst1|45 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|19 ; |main|BinaryToBCD:inst5|74185:inst1|19 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|18 ; |main|BinaryToBCD:inst5|74185:inst1|18 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|17 ; |main|BinaryToBCD:inst5|74185:inst1|17 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|16 ; |main|BinaryToBCD:inst5|74185:inst1|16 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|15 ; |main|BinaryToBCD:inst5|74185:inst1|15 ; out0             ;
+; |main|BinaryToBCD:inst5|74185:inst1|14 ; |main|BinaryToBCD:inst5|74185:inst1|14 ; out0             ;
+; |main|7447:inst1|87                    ; |main|7447:inst1|87                    ; out0             ;
+; |main|7447:inst1|1                     ; |main|7447:inst1|1                     ; out0             ;
+; |main|7447:inst1|38                    ; |main|7447:inst1|38                    ; out0             ;
+; |main|7447:inst1|86                    ; |main|7447:inst1|86                    ; out0             ;
+; |main|7447:inst1|31                    ; |main|7447:inst1|31                    ; out0             ;
+; |main|7447:inst1|2                     ; |main|7447:inst1|2                     ; out0             ;
+; |main|7447:inst1|30                    ; |main|7447:inst1|30                    ; out0             ;
+; |main|7447:inst1|85                    ; |main|7447:inst1|85                    ; out0             ;
+; |main|7447:inst1|32                    ; |main|7447:inst1|32                    ; out0             ;
+; |main|7447:inst1|84                    ; |main|7447:inst1|84                    ; out0             ;
+; |main|7447:inst1|5                     ; |main|7447:inst1|5                     ; out0             ;
+; |main|7447:inst1|3                     ; |main|7447:inst1|3                     ; out0             ;
+; |main|7447:inst1|4                     ; |main|7447:inst1|4                     ; out0             ;
+; |main|7447:inst1|83                    ; |main|7447:inst1|83                    ; out0             ;
+; |main|7447:inst1|33                    ; |main|7447:inst1|33                    ; out0             ;
+; |main|7447:inst1|6                     ; |main|7447:inst1|6                     ; out0             ;
+; |main|7447:inst1|82                    ; |main|7447:inst1|82                    ; out0             ;
+; |main|7447:inst1|34                    ; |main|7447:inst1|34                    ; out0             ;
+; |main|7447:inst1|7                     ; |main|7447:inst1|7                     ; out0             ;
+; |main|7447:inst1|8                     ; |main|7447:inst1|8                     ; out0             ;
+; |main|7447:inst1|81                    ; |main|7447:inst1|81                    ; out0             ;
+; |main|7447:inst1|36                    ; |main|7447:inst1|36                    ; out0             ;
+; |main|7447:inst1|39                    ; |main|7447:inst1|39                    ; out0             ;
+; |main|7447:inst1|35                    ; |main|7447:inst1|35                    ; out0             ;
+; |main|Clock_Divider:inst|Add0~5        ; |main|Clock_Divider:inst|Add0~5        ; out0             ;
+; |main|Clock_Divider:inst|Add0~6        ; |main|Clock_Divider:inst|Add0~6        ; out0             ;
+; |main|Clock_Divider:inst|Add0~7        ; |main|Clock_Divider:inst|Add0~7        ; out0             ;
+; |main|Clock_Divider:inst|Add0~8        ; |main|Clock_Divider:inst|Add0~8        ; out0             ;
+; |main|Clock_Divider:inst|Add0~9        ; |main|Clock_Divider:inst|Add0~9        ; out0             ;
+; |main|Clock_Divider:inst|Add0~10       ; |main|Clock_Divider:inst|Add0~10       ; out0             ;
+; |main|Clock_Divider:inst|Add0~11       ; |main|Clock_Divider:inst|Add0~11       ; out0             ;
+; |main|Clock_Divider:inst|Add0~12       ; |main|Clock_Divider:inst|Add0~12       ; out0             ;
+; |main|Clock_Divider:inst|Add0~13       ; |main|Clock_Divider:inst|Add0~13       ; out0             ;
+; |main|Clock_Divider:inst|Add0~14       ; |main|Clock_Divider:inst|Add0~14       ; out0             ;
+; |main|Clock_Divider:inst|Add0~15       ; |main|Clock_Divider:inst|Add0~15       ; out0             ;
+; |main|Clock_Divider:inst|Add0~16       ; |main|Clock_Divider:inst|Add0~16       ; out0             ;
+; |main|Clock_Divider:inst|Add0~17       ; |main|Clock_Divider:inst|Add0~17       ; out0             ;
+; |main|Clock_Divider:inst|Add0~18       ; |main|Clock_Divider:inst|Add0~18       ; out0             ;
+; |main|Clock_Divider:inst|Add0~19       ; |main|Clock_Divider:inst|Add0~19       ; out0             ;
+; |main|Clock_Divider:inst|Add0~20       ; |main|Clock_Divider:inst|Add0~20       ; out0             ;
+; |main|Clock_Divider:inst|Add0~21       ; |main|Clock_Divider:inst|Add0~21       ; out0             ;
+; |main|Clock_Divider:inst|Add0~22       ; |main|Clock_Divider:inst|Add0~22       ; out0             ;
+; |main|Clock_Divider:inst|Add0~23       ; |main|Clock_Divider:inst|Add0~23       ; out0             ;
+; |main|Clock_Divider:inst|Add0~24       ; |main|Clock_Divider:inst|Add0~24       ; out0             ;
+; |main|Clock_Divider:inst|Add0~25       ; |main|Clock_Divider:inst|Add0~25       ; out0             ;
+; |main|Clock_Divider:inst|Add0~26       ; |main|Clock_Divider:inst|Add0~26       ; out0             ;
+; |main|Clock_Divider:inst|Add0~27       ; |main|Clock_Divider:inst|Add0~27       ; out0             ;
+; |main|Clock_Divider:inst|Add0~28       ; |main|Clock_Divider:inst|Add0~28       ; out0             ;
+; |main|Clock_Divider:inst|Add0~29       ; |main|Clock_Divider:inst|Add0~29       ; out0             ;
+; |main|Clock_Divider:inst|Add0~30       ; |main|Clock_Divider:inst|Add0~30       ; out0             ;
+; |main|Clock_Divider:inst|Add0~31       ; |main|Clock_Divider:inst|Add0~31       ; out0             ;
+; |main|Clock_Divider:inst|Add0~32       ; |main|Clock_Divider:inst|Add0~32       ; out0             ;
+; |main|Clock_Divider:inst|Add0~33       ; |main|Clock_Divider:inst|Add0~33       ; out0             ;
+; |main|Clock_Divider:inst|Add0~34       ; |main|Clock_Divider:inst|Add0~34       ; out0             ;
+; |main|Clock_Divider:inst|Add0~35       ; |main|Clock_Divider:inst|Add0~35       ; out0             ;
+; |main|Clock_Divider:inst|Add0~36       ; |main|Clock_Divider:inst|Add0~36       ; out0             ;
+; |main|Clock_Divider:inst|Add0~37       ; |main|Clock_Divider:inst|Add0~37       ; out0             ;
+; |main|Clock_Divider:inst|Add0~38       ; |main|Clock_Divider:inst|Add0~38       ; out0             ;
+; |main|Clock_Divider:inst|Add0~39       ; |main|Clock_Divider:inst|Add0~39       ; out0             ;
+; |main|Clock_Divider:inst|Add0~40       ; |main|Clock_Divider:inst|Add0~40       ; out0             ;
+; |main|Clock_Divider:inst|Add0~41       ; |main|Clock_Divider:inst|Add0~41       ; out0             ;
+; |main|Clock_Divider:inst|Add0~42       ; |main|Clock_Divider:inst|Add0~42       ; out0             ;
+; |main|Clock_Divider:inst|Add0~43       ; |main|Clock_Divider:inst|Add0~43       ; out0             ;
+; |main|Clock_Divider:inst|Add0~44       ; |main|Clock_Divider:inst|Add0~44       ; out0             ;
+; |main|Clock_Divider:inst|Add0~45       ; |main|Clock_Divider:inst|Add0~45       ; out0             ;
+; |main|Clock_Divider:inst|Add0~46       ; |main|Clock_Divider:inst|Add0~46       ; out0             ;
+; |main|Clock_Divider:inst|Add0~47       ; |main|Clock_Divider:inst|Add0~47       ; out0             ;
+; |main|Clock_Divider:inst|Add0~48       ; |main|Clock_Divider:inst|Add0~48       ; out0             ;
+; |main|Clock_Divider:inst|Add0~49       ; |main|Clock_Divider:inst|Add0~49       ; out0             ;
+; |main|Clock_Divider:inst|Add0~50       ; |main|Clock_Divider:inst|Add0~50       ; out0             ;
+; |main|Clock_Divider:inst|Add0~51       ; |main|Clock_Divider:inst|Add0~51       ; out0             ;
+; |main|Clock_Divider:inst|Add0~52       ; |main|Clock_Divider:inst|Add0~52       ; out0             ;
+; |main|Clock_Divider:inst|Add0~53       ; |main|Clock_Divider:inst|Add0~53       ; out0             ;
+; |main|Clock_Divider:inst|Add0~54       ; |main|Clock_Divider:inst|Add0~54       ; out0             ;
+; |main|Clock_Divider:inst|Add0~55       ; |main|Clock_Divider:inst|Add0~55       ; out0             ;
+; |main|Clock_Divider:inst|Add0~56       ; |main|Clock_Divider:inst|Add0~56       ; out0             ;
+; |main|Clock_Divider:inst|Add0~57       ; |main|Clock_Divider:inst|Add0~57       ; out0             ;
+; |main|Clock_Divider:inst|Add0~58       ; |main|Clock_Divider:inst|Add0~58       ; out0             ;
+; |main|Clock_Divider:inst|Add0~59       ; |main|Clock_Divider:inst|Add0~59       ; out0             ;
+; |main|Clock_Divider:inst|Add0~60       ; |main|Clock_Divider:inst|Add0~60       ; out0             ;
+; |main|Clock_Divider:inst|Equal0~0      ; |main|Clock_Divider:inst|Equal0~0      ; out0             ;
++----------------------------------------+----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Sat May 09 10:03:55 2020
+Info: Command: quartus_sim --simulation_results_format=VWF SevenSeg -c SevenSeg
+Info (324025): Using vector source file "E:/IAAU/Quartus tasks/clock24/Waveform.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "CO[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "CO[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "CO[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "CO[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "CO[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "CO[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "CO[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "CO[0]" in design.
+Warning (328012): Can't find signal in vector source file for input pin "|main|Clk_Reset"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       5.15 %
+Info (328052): Number of transitions in simulation is 51
+Info (324045): Vector file SevenSeg.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4448 megabytes
+    Info: Processing ended: Sat May 09 10:03:56 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SevenSeg">
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|lpm_compare3:inst18|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_k7j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|lpm_compare4:inst|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_k7j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|lpm_compare5:inst10|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_k7j.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
